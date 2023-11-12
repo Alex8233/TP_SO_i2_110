@@ -1,3 +1,4 @@
+
 Zalazar Alex (Beta)
 Castelli Felix (Alfa)
 
@@ -16,3 +17,4 @@ Si, se puede utilizando merge, de la misma manera que hizo Alfa actualizando el 
 
 d-¿Los datos que tenía en mi repositorio , editados por mi, se pierden si quiero actualizar el fork?
 No, los datos no se pierden una vez que haces el merge.Mientras sean archivos iguales, y si hay nuevos se agregan.
+
