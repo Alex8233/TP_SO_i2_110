@@ -12,9 +12,60 @@ git merge upstream/main
 b- ¿Puede ALFA actualizar su FORK al estado del fork de GAMMA?
 Si, haciendo lo mismo que en el a pero el merge con el repositorio de GAMMA
 
-c-¿Puede GAMMA actualizar su FORK al estado del fork de ALFA?
+c- ¿Puede GAMMA actualizar su FORK al estado del fork de ALFA?
 Si, se puede utilizando merge, de la misma manera que hizo Alfa actualizando el fork de gamma.
 
-d-¿Los datos que tenía en mi repositorio , editados por mi, se pierden si quiero actualizar el fork?
-No, los datos no se pierden una vez que haces el merge.Mientras sean archivos iguales, y si hay nuevos se agregan.
+
+d- ¿Los datos que tenía en mi repositorio , editados por mi, se pierden si quiero actualizar el fork?
+No, los datos no se pierden una vez que haces el merge. Mientras sean archivos iguales y si hay nuevos se agregan.
+
+e- realizar un listado, paso a paso ,de los comando necesarios para resolver este TP por orden de ejecución de los mismos junto con los apellidos y nombre de los alumnos
+
+Zalazar Alex:
+
+git add fork.txt
+git commit -m "fork.txt"
+git push origin main
+
+Castelli Felix:
+
+git clone https://github.com/FelixCastelli/TP_SO_i2_110.git
+git add .
+git commit -m "fork.txt modificado"
+git push origin main
+
+Zalazar Alex:
+
+git clone https://github.com/Alex8233/TP_SO_i2_110.git
+git add NuevoDato.txt
+git commit -m "Commit gamma Beta"
+git push origin main
+
+Castelli Felix:
+
+git remote add upstream https://github.com/Alex8233/TP_SO_i2_110.git
+git fetch upstream
+git merge upstream/main
+
+Zalazar Alex:
+
+git add respuesta_I2_Equipo110.txt
+git commit -m "commit 2 Beta"
+
+Castelli Felix:
+
+git fetch upstream
+git merge upstream/main
+git add .
+git commit -m "Respuestas de GAMMA agregadas"
+git push origin main
+
+Zalazar Alex:
+
+git remote add upstream https://github.com/FelixCastelli/TP_SO_i2_110.git
+git fetch upstream
+git merge upstream/main
+git pull origin main
+git add .
+git commit -m "Respuestas agregadas"
 
